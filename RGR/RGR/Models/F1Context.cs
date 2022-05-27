@@ -26,7 +26,7 @@ namespace RGR
         {
             if (!optionsBuilder.IsConfigured)
             {
-                    optionsBuilder.UseSqlite("Data Source=C:\\Users\\Us1\\Desktop\\SQLite\\BS\\F1.db");
+                    optionsBuilder.UseSqlite(@"Data Source=C:\\Users\\Us1\\Desktop\\SQLite\\BS\\F1.db");
             }
         }
 

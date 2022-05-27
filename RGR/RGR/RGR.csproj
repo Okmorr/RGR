@@ -27,6 +27,7 @@
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.12" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

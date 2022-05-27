@@ -28,28 +28,48 @@
 		<ScrollViewer>
 			<TabControl TabStripPlacement="Left" Background="#41444b" >
 				<TabItem Header="Championship" VerticalContentAlignment="Center" Foreground="White" Background="#293133">
-					<Grid>
+					<Grid RowDefinitions="30*, *" >
 						<DataGrid Items="{Binding $parent[Window].DataContext.Championships}">
 							<DataGrid.Columns>
 								<DataGridTextColumn Header="YearId" Binding="{Binding YearId}"/>
+								<DataGridTemplateColumn>
+									<DataTemplate>
+										<Button CommandParameter="{Binding}" Command="{Binding $parent[Window].DataContext.Delete}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+											Del
+										</Button>
+									</DataTemplate>
+								</DataGridTemplateColumn>
 							</DataGrid.Columns>
 						</DataGrid>
+						<Button Grid.Row="1" CommandParameter="{Binding $parent[TabItem].Header}" Command="{Binding $parent[Window].DataContext.Create}"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+							New
+						</Button>
 					</Grid>
 				</TabItem>
 
 				<TabItem Header="Driver" VerticalContentAlignment="Center" Foreground="White" Background="#293133">
-					<Grid>
+					<Grid RowDefinitions="30*, *">
 						<DataGrid Items="{Binding $parent[Window].DataContext.Drivers}">
 							<DataGrid.Columns>
 								<DataGridTextColumn Header="NumId" Binding="{Binding NumId}"/>
 								<DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+								<DataGridTemplateColumn>
+									<DataTemplate>
+										<Button CommandParameter="{Binding}" Command="{Binding $parent[Window].DataContext.Delete}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+											Del
+										</Button>
+									</DataTemplate>
+								</DataGridTemplateColumn>
 							</DataGrid.Columns>
 						</DataGrid>
+						<Button Grid.Row="1" CommandParameter="{Binding $parent[TabItem].Header}" Command="{Binding $parent[Window].DataContext.Create}"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+							New
+						</Button>
 					</Grid>
 				</TabItem>
 
 				<TabItem Header="ResultDriver" VerticalContentAlignment="Center" Foreground="White" Background="#293133">
-					<Grid>
+					<Grid RowDefinitions="30*, *">
 						<DataGrid Items="{Binding $parent[Window].DataContext.ResultDrivers}">
 							<DataGrid.Columns>
 								<DataGridTextColumn Header="PosId" Binding="{Binding PosId}"/>
@@ -60,41 +80,64 @@
 								<DataGridTextColumn Header="KpH" Binding="{Binding KpH}"/>
 								<DataGridTextColumn Header="Best" Binding="{Binding Best}"/>
 								<DataGridTextColumn Header="Laps" Binding="{Binding Laps}"/>
+								<DataGridTemplateColumn>
+									<DataTemplate>
+										<Button CommandParameter="{Binding}" Command="{Binding $parent[Window].DataContext.Delete}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+											Del
+										</Button>
+									</DataTemplate>
+								</DataGridTemplateColumn>
 							</DataGrid.Columns>
 						</DataGrid>
+						<Button Grid.Row="1" CommandParameter="{Binding $parent[TabItem].Header}" Command="{Binding $parent[Window].DataContext.Create}"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+							New
+						</Button>
 					</Grid>
 				</TabItem>
 
 				<TabItem Header="Team" VerticalContentAlignment="Center" Foreground="White" Background="#293133">
-					<Grid>
+					<Grid RowDefinitions="30*, *">
 						<DataGrid Items="{Binding $parent[Window].DataContext.Teams}">
 							<DataGrid.Columns>
 								<DataGridTextColumn Header="NameId" Binding="{Binding NameId}"/>
 								<DataGridTextColumn Header="TrackName" Binding="{Binding TrackName}"/>
+								<DataGridTemplateColumn>
+									<DataTemplate>
+										<Button CommandParameter="{Binding}" Command="{Binding $parent[Window].DataContext.Delete}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+											Del
+										</Button>
+									</DataTemplate>
+								</DataGridTemplateColumn>
 							</DataGrid.Columns>
 						</DataGrid>
+						<Button Grid.Row="1" CommandParameter="{Binding $parent[TabItem].Header}" Command="{Binding $parent[Window].DataContext.Create}"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+							New
+						</Button>
 					</Grid>
 				</TabItem>
 
 				<TabItem Header="Track" VerticalContentAlignment="Center" Foreground="White" Background="#293133">
-					<Grid>
+					<Grid RowDefinitions="30*, *">
 						<DataGrid Items="{Binding $parent[Window].DataContext.Tracks}">
 							<DataGrid.Columns>
 								<DataGridTextColumn Header="NameId" Binding="{Binding NameId}"/>
 								<DataGridTextColumn Header="Year" Binding="{Binding Year}"/>
 								<DataGridTextColumn Header="Lap" Binding="{Binding Lap}"/>
+								<DataGridTemplateColumn>
+									<DataTemplate>
+										<Button CommandParameter="{Binding}" Command="{Binding $parent[Window].DataContext.Delete}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+											Del
+										</Button>
+									</DataTemplate>
+								</DataGridTemplateColumn>
 							</DataGrid.Columns>
 						</DataGrid>
+						<Button Grid.Row="1" CommandParameter="{Binding $parent[TabItem].Header}" Command="{Binding $parent[Window].DataContext.Create}"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+							New
+						</Button>
 					</Grid>
 				</TabItem>
-
 			</TabControl>
 		</ScrollViewer>
-
 	</DockPanel>
-
-
-
-
-
 </UserControl>
